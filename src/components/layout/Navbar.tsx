@@ -58,22 +58,31 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden group-hover:scale-110 transition-transform shrink-0">
+            <Link
+              href="/"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-aqua-400 rounded-lg"
+              aria-label="RM Lures — Captain John's Fishing Charters home"
+            >
+              {/* Logo image — 3:2 ratio, natural dimensions */}
+              <div className="shrink-0 rounded-xl overflow-hidden shadow-md ring-1 ring-white/10 group-hover:ring-aqua-400/40 group-hover:shadow-[0_4px_20px_rgba(109,213,237,0.35)] group-hover:scale-105 transition-all duration-300">
                 <Image
                   src="/images/logo/rm-lures-fishing-charters-port-elizabeth-logo.webp"
-                  alt="RM Lures — handmade fishing lures and charters, Port Elizabeth"
-                  fill
-                  className="object-cover"
-                  sizes="48px"
+                  alt="RM Lures logo — handmade fishing lures, Port Elizabeth"
+                  width={84}
+                  height={56}
+                  className="block"
                   priority
                 />
               </div>
-              <div className="hidden sm:block">
-                <div className="text-white font-heading font-bold text-xl">
+
+              {/* Brand wordmark */}
+              <div className="hidden sm:flex flex-col justify-center leading-none">
+                <span className="text-white font-heading font-bold text-lg tracking-tight group-hover:text-aqua-400 transition-colors duration-300">
                   Captain John&apos;s
-                </div>
-                <div className="text-aqua-400 text-sm">Fishing Charters</div>
+                </span>
+                <span className="text-aqua-400/80 text-[11px] font-medium tracking-[0.18em] uppercase mt-0.5">
+                  Fishing Charters · PE
+                </span>
               </div>
             </Link>
 
