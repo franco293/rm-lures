@@ -97,19 +97,19 @@ export function Hero() {
           </div>
 
           {/* Right Column - Image/Visual */}
-          <div className="relative hidden lg:block">
-            <div className="relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative">
+            <div className="relative w-full h-64 sm:h-80 lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero/captain-john-fishing-port-elizabeth.webp"
                 alt="Captain John holding a large kob caught inshore on the Swartkops River near Port Elizabeth, Eastern Cape"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            {/* Floating Stats Card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs">
+            {/* Floating Stats Card — desktop only */}
+            <div className="hidden lg:block absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-aqua-500 rounded-full flex items-center justify-center">
                   <span className="text-3xl">🎣</span>
